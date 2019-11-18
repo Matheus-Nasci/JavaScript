@@ -24,9 +24,12 @@
     <p>milhões de bacterias e para elas o mundo delas é você</p>
 
     <script>
-    window.confirm("Deseja receber nossas notificações ?") //Janela para Confirmar ou Cancelar 
-    window.alert("Vamos Começar !") //Janela para Alerta
-    window.prompt("Qual é seu Nome?") // Janela para perguntar - No caso aqui é o nome mas poderia ser outra coisa
+        var Num1 = Number.parseInt(window.prompt("Digite um número: ")) //Prompt sempre trata como string
+        var Num2 = Number.parseInt(window.prompt("Digite o segundo número: "))//Tem como usar só Number
+        var soma = Num1 + Num2 
+        window.alert("A Soma dos números é " + soma) //Concatenação //Para Real é Float
+        // + Para Adição, number + number = Soma
+        // + Para Concatenação, string + string = Juntar que é uma Concatenação
     </script>
 
     
