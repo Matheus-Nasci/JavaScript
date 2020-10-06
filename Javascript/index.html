@@ -5,6 +5,99 @@
     <body>
         <script>
             
+            //Javascript não possui tipagem forte como o Typescript e o CSharp
+            var nome = 'Matheus'; //string
+            var idade = 17; //int
+            var peso = 75.3; //float;
+            var humano = true; //boolean
+
+            //Vetores
+            var pessoas = ['Matheus','Lucas','Mari'];
+
+            var pessoa = {
+                nome: 'Matheus',
+                idade: 18,
+                peso: 75.3,
+                humano: true
+            };
+
+            //console.log(pessoas[2]);
+            //console.log(pessoa.idade);
+
+            //Na Operação matemática na programação o % representa o resto da divisão
+            var x = 10, y = 5;
+            var resultado = x * y
+            //console.log(resultado)
+            
+            //As variáveis definidas dentro das funções são visivéis somente dentro das funções
+            function soma(numero1, numero2){
+                var resultado = numero1 + numero2;
+
+                return resultado;
+            }
+
+            var resultado = soma(1,9);
+            //console.log(resultado);
+
+            function retornaSexo(sexo){
+                if(sexo === 'M'){ //Dois iguais é uma comparação, Três ele vê também a Tipagem
+                    return 'Masculino';
+                } else if(sexo === 'F'){
+                    return 'Feminino';
+                } else {
+                    return 'Outros';
+                }
+            }
+            
+            //Ou
+
+            function retornarSexo(Sexo){
+                switch (Sexo) {
+                    case 'M':
+                        return 'Masculino';
+                        break;
+                    case 'F':
+                        return 'Feminino';
+                        break;
+                    default:
+                        return 'Outros';
+                        break;
+                }
+            }
+
+            var resultado = retornarSexo('L');
+            //console.log(resultado);
+
+            //AND(&&), OR(||), NOT(!==)-Ou diferente
+            var Sexo = 'M', idade = 17;
+
+            if (Sexo === 'M' && idade >= 17){
+                //console.log('OK');
+            }
+
+            //Condição Ternária - Condição básica na mesma linha
+            var Sexo = 'F';
+            var retorno = (Sexo === 'M') ? 'Masculino' : 'Feminino';
+            //console.log(retorno);
+
+            //Estrutura de repetição - lOOP
+            //for(Usar quando souber quantas vezes vai ser executado), while
+            //(Já o while, quando você não souber)
+            for (var i = 0; i <= 100; i++) {
+                //console.log(i);
+            }
+
+            var j = 0;
+            while (j <= 100) {
+                console.log(j)
+                //j++;
+            }
+
+            function exibirAlgo() {
+                console.log('Olá Mundo!');
+            }
+            //setInterval(exibirAlgo, 1000)
+
         </script>
     </body>
 </html>
