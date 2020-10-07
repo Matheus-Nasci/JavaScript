@@ -89,15 +89,65 @@
 
             var j = 0;
             while (j <= 100) {
-                console.log(j)
-                //j++;
+                //console.log(j)
+                j++;
             }
 
+            //Intervalo e Timeout
             function exibirAlgo() {
-                console.log('Olá Mundo!');
+                //console.log('Olá Mundo!');
             }
-            //setInterval(exibirAlgo, 1000)
+            setInterval(exibirAlgo, 5000)
 
+            //DOM - É a árvore de elementos dentro do HTML ou estrutura 
+            // de código que está sendo manipulada.
+
+            function mostrarAlerta() {
+                alert('Botão foi clicado')
+            };
+        </script>
+
+        <div id="app">
+            <!--<button onmouseover="mostrarAlerta()">Me pressione</button>
+            <input onkeypress="mostrarAlerta()"/>-->
+
+            <!--<input type="text" name="nome"/>
+            <button class="botao">Adicionar</button>-->
+
+            <input id="none"/>
+
+            <div class="box"></div>
+
+        </div>
+
+        <script>
+            var inputElement = document.querySelector('input[name=nome]');
+            var btnElement = document.querySelector('button.botao');
+
+            //btnElement.onclick = function() {
+            //    var text = inputElement.value;
+            //    alert(text)
+            //};
+            
+            var linkElement = document.createElement('a');
+
+            linkElement.setAttribute('href', 'https://github.com/Matheus-Nasci?tab=repositories')
+            linkElement.setAttribute('title', 'Acessar GitHub - Matheus')
+
+            var textElement = document.createTextNode('Acessar site do GitHub')
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app')
+            containerElement.appendChild(linkElement);
+
+            var inputElement = document.querySelector('#none')
+            containerElement.removeChild(inputElement)
+
+            //STYLE.CSS
+            var boxElement = document.querySelector('.box');
+            boxElement.style.width = 100
+            boxElement.style.height = 100
+            boxElement.style.backgroundColor = '#f00';
         </script>
     </body>
 </html>
