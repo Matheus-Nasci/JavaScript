@@ -7,11 +7,14 @@
 </head>
 <body>
 
-    <button onclick="CriarQuadrado()">Criar</button>
+    <ul id="app">
+        <button onclick="CriarQuadrado()">Criar</button>
+    </ul>
 
     <script>
 
-        var boxElement = document.querySelector('app');
+        var boxElement = document.querySelector('#app');
+
         function CriarQuadrado() {
             boxElement.style.width = 100
             boxElement.style.height = 100
